@@ -10,5 +10,5 @@ class MainWin(QWidget):
     def set_appear(self):
         pass
 
-
-
+    def initUI(self):
+        pass
