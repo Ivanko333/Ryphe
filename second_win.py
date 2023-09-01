@@ -4,7 +4,7 @@ from instr import *
 
 
 class SecondWin(QWidget):
-    def __init__(self) -> object:
+    def __init__(self):
         super().__init__()
         self.initUI()
         self.connects()
@@ -24,14 +24,16 @@ class SecondWin(QWidget):
         button1 = QPushButton(txt_starttest1)
         button2 = QPushButton(txt_starttest2)
         button3 = QPushButton(txt_starttest3)
+        button4 = QPushButton(txt_sendresults)
+        h_line = QHBoxLayout()
         v_line1 = QVBoxLayout()
         v_line2 = QVBoxLayout()
-        h_line = QHBoxLayout
         input1 = QLineEdit(txt_hintname)
         input2 = QLineEdit(txt_hintage)
         input3 = QLineEdit(txt_hinttest1)
         input4 = QLineEdit(txt_hinttest2)
         input5 = QLineEdit(txt_hinttest3)
+
         v_line1.addWidget(name_txt, alignment=Qt.AlignLeft)
         v_line1.addWidget(input1, alignment=Qt.AlignLeft)
         v_line1.addWidget(age, alignment=Qt.AlignLeft)
@@ -45,9 +47,10 @@ class SecondWin(QWidget):
         v_line1.addWidget(button3, alignment=Qt.AlignLeft)
         v_line1.addWidget(input4, alignment=Qt.AlignLeft)
         v_line1.addWidget(input5, alignment=Qt.AlignLeft)
-        self.setLayout(h_line)
+        v_line.addWidget(button4, alignment=Qt.AlignCenter)
         self.setLayout(v_line1)
         self.setLayout(v_line2)
+        self.setLayout(h_line)
 
     def connects(self):
         pass
