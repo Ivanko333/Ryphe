@@ -70,7 +70,7 @@ class SecondWin(QWidget):
         self.setLayout(h_line)
 
     def next(self):
-        self.third_win = ThirdWin(self.age, self.t1, self.t2, self.t3)
+        self.third_win = ThirdWin(self.age_input.text(), self.t1.text(), self.t2.text(), self.t3.text())
         self.hide()
 
     def test_timer1(self):

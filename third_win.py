@@ -21,7 +21,7 @@ class ThirdWin(QWidget):
         self.show()
 
     def initUI(self):
-        final_text1 = QLabel()
+        final_text1 = QLabel(str(self.get_results()))
         final_text2 = QLabel()
         v_line = QVBoxLayout()
         v_line.addWidget(final_text1, alignment=Qt.AlignCenter)
@@ -29,7 +29,8 @@ class ThirdWin(QWidget):
         self.setLayout(v_line)
 
     def get_results(self):
-        if self.age < 8:
+        if int(self.age) < 8:
             self.index = 0
             return 'Ошибка возраста!!!'
         self.index = (4 * (int(self.t1) + int(self.t2) + int(self.t3)) - 200) / 10
+        return self.index
